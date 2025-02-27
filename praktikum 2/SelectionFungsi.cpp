@@ -1,6 +1,12 @@
 #include <stdio.h>
 
 int selectionSort(int arr[], int n){
+  printf("Sebelum diurutkan: \n");
+  for(int i = 0; i < n; i++){
+    printf("%d ", arr[i]);
+  }
+  printf("\n");
+
   int i, j, posisi, swap;
   for(i = 0; i < (n-1); i++){
     posisi = i;
@@ -14,6 +20,11 @@ int selectionSort(int arr[], int n){
       arr[i] = arr[posisi];
       arr[posisi] = swap;
     }
+    printf("Iterasi ke-%d: ", i + 1);
+      for(int k = 0; k < n; k++){
+        printf("%d ", arr[k]);
+      }
+      printf("\n");
   }
 }
 
